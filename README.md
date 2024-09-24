@@ -15,12 +15,14 @@ contact-personal)
 ## Endpoint-Definitions
 
 getting all Information about all cottages:
-```
+
+```http request
 GET http://www.foo.de/v1/cottages
 ```
 
 creating a new cottage (with POST-Method):
-```
+
+```http request
 POST http://www.foo.de/v1/cottage
 ```
 

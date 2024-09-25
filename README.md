@@ -40,6 +40,16 @@ PUT http://www.foo.de/v1/cottage
 Content-Type: application/json
 ```
 
+```http request
+PUT http://www.foo.de/v1/cottage?{id}&...
+```
+
+### DELETE
+
+```http request
+DELETE http://www.foo.de/v1/cottage?{id}
+```
+
 ## Cottage-Definition
 
 ```json
@@ -72,3 +82,5 @@ Content-Type: application/json
 
 - Can/should we use an SSL-Certificate?
 - Application/JSON, Content-Type Automatically...?!?1
+- Notation für HTTP-Request-Dokumentationen und Unterschied zwischen
+  Fragezeichen und Schrägstrich getrennten Request-Parametern

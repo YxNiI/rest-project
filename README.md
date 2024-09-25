@@ -28,6 +28,7 @@ creating a new cottage (with POST-Method):
 
 ```http request
 POST http://www.foo.de/v1/cottage
+Content-Type: application/json
 ```
 
 ### PUT
@@ -36,10 +37,8 @@ updating a cottage's information
 
 ```http request
 PUT http://www.foo.de/v1/cottage
+Content-Type: application/json
 ```
-
-a payload is posted here (which means a structure of information about
-the new cottage, with all its needed information)
 
 ## Cottage-Definition
 

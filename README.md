@@ -77,10 +77,3 @@ DELETE http://www.foo.de/v1/cottage?{id}
 | price per day  | daily price for staying at the cottage                    | float   |
 | currency       | currency used, defined as: "country's currency-shorthand" | string  |
 | contact-person | the contact person for this cottage                       | string  |
-
-## Questions
-
-- Can/should we use an SSL-Certificate?
-- Application/JSON, Content-Type Automatically...?!?1
-- Notation für HTTP-Request-Dokumentationen und Unterschied zwischen
-  Fragezeichen und Schrägstrich getrennten Request-Parametern

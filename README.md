@@ -14,28 +14,48 @@ contact-personal)
 
 ## Endpoint-Definitions
 
+### GET
+
 getting all Information about all cottages:
 
 ```http request
 GET http://www.foo.de/v1/cottages
 ```
 
-| Name           | Description                            | Type    |
-|:---------------|:---------------------------------------|:--------|
-| id             | unique resource identifier             | integer |
-| name           | name of the cottage                    | string  |
-| size           | size of the cottage                    | integer |
-| bed-count      | number of beds in the cottage          | integer |
-| bedroom-count  | number of bedrooms in the cottage      | integer |
-| beach-distance | distance from the cottage to the beach | float   |
-| price per day  | daily price for staying at the cottage | float   |
-| contact-person | the contact person for this cottage    | string  |
+```json
+{
+  "id": 1,
+  "name": "Rotweiden-Villa",
+  "size": 150,
+  "bedCount": 8,
+  "bedroomCount": 4,
+  "beachDistance": 0.5,
+  "pricePerDay": 1600.00,
+  "contactPerson": "Hans Peter Klaus von Grahlmann"
+}
+```
+
+| Name           | Description                                         | Type    |
+|:---------------|:----------------------------------------------------|:--------|
+| id             | unique resource identifier                          | integer |
+| name           | name of the cottage                                 | string  |
+| size           | size of the cottage                                 | integer |
+| bed-count      | number of beds in the cottage                       | integer |
+| bedroom-count  | number of bedrooms in the cottage                   | integer |
+| beach-distance | distance from the cottage to the beach in km        | float   |
+| price per day  | daily price for staying at the cottage              | float   |
+| currency       | currency used in the country the cottage is located | string  |
+| contact-person | the contact person for this cottage                 | string  |
 
 creating a new cottage (with POST-Method):
+
+### POST
 
 ```http request
 POST http://www.foo.de/v1/cottage
 ```
+
+### PUT
 
 updating a
 

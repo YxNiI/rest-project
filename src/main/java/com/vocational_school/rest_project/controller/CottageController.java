@@ -1,6 +1,10 @@
 package com.vocational_school.rest_project.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,7 +26,13 @@ public class CottageController
         this.cottageService = cottageService;
     }
 
-    @PostMapping(path = "v1/cottage")
+    @GetMapping(path = "/v1/cottages")
+    public ResponseEntity<List<Cottage>> getV1Cottages()
+    {
+        return ResponseEntity.ok(cottageService.getV1Cottages());
+    }
+
+    @PostMapping(path = "/v1/cottage")
     public void postV1Cottage(@RequestBody Cottage cottage)
     {
         cottageService.postV1Cottage(cottage);

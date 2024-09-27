@@ -1,6 +1,7 @@
 package com.vocational_school.rest_project.business;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -14,6 +15,11 @@ import com.vocational_school.rest_project.domain.Cottage;
 public class CottageService
 {
     private final List<Cottage> cottages = new ArrayList<>();
+
+    public List<Cottage> getV1Cottages()
+    {
+        return Collections.unmodifiableList(cottages);
+    }
 
     public void postV1Cottage(Cottage cottage)
     {

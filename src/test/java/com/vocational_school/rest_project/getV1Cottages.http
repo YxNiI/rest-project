@@ -1,1 +1,1 @@
-GET http://localhost/v1/cottages
+GET http://localhost:8080/v1/cottages

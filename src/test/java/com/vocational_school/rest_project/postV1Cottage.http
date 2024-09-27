@@ -1,5 +1,5 @@
 # @name=cottage-01
-POST http://localhost:8889/v1/cottage
+POST http://localhost:8080/v1/cottage
 Content-Type: application/json
 
 {
@@ -17,7 +17,7 @@ Content-Type: application/json
 ###
 
 # @name=cottage-02
-POST http://localhost:8889/v1/cottage
+POST http://localhost:8080/v1/cottage
 Content-Type: application/json
 
 {
@@ -35,7 +35,7 @@ Content-Type: application/json
 ###
 
 # @name=cottage-03
-POST http://localhost:8889/v1/cottage
+POST http://localhost:8080/v1/cottage
 Content-Type: application/json
 
 {

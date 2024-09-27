@@ -48,7 +48,8 @@ public class CottageController
     }
 
     @PutMapping(path = "/v1/cottage")
-    public void putV1Cottage()
+    // Use the Map-Conversion?
+    public void putV1Cottage(@RequestParam int id, @RequestParam Object... values)
     {
         // to be implemented
     }

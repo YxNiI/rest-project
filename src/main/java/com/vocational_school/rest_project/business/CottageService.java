@@ -27,12 +27,23 @@ public class CottageService
         cottages.add(cottage);
     }
 
+    public void putV1Cottage(Cottage cottage)
+    {
+        cottages.remove(getCottageFrom(cottage.getId()));
+        cottages.add(cottage);
+    }
+
     public void deleteV1Cottage(int id)
     {
-        cottages.remove(cottages.stream()
-                                .filter(cottage -> cottage.getId() == id)
-                                .findAny()
-                                .orElseThrow(() -> new NotFoundException("No cottage has the given id: %d!".formatted(id))));
+        cottages.remove(getCottageFrom(id));
+    }
+
+    private Cottage getCottageFrom(int id)
+    {
+        return cottages.stream()
+                       .filter(cottage -> cottage.getId() == id)
+                       .findAny()
+                       .orElseThrow(() -> new NotFoundException("No cottage has the given id: %d!".formatted(id)));
     }
 
 }

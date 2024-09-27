@@ -1,0 +1,17 @@
+# @name=tryDeleteCottage01
+DELETE http://localhost:8080/v1/cottage?id=1
+
+###
+
+# @name=tryDeleteCottage02
+DELETE http://localhost:8080/v1/cottage?id=2
+
+###
+
+# @name=tryDeleteCottage03
+DELETE http://localhost:8080/v1/cottage?id=3
+
+###
+
+# @name=tryDeleteCottageUndefined
+DELETE http://localhost:8080/v1/cottage?id=-1

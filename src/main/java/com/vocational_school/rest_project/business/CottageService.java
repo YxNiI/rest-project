@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.vocational_school.rest_project.business.exceptions.NotFoundException;
 import com.vocational_school.rest_project.domain.Cottage;
 
 /**
@@ -31,7 +32,7 @@ public class CottageService
         cottages.remove(cottages.stream()
                                 .filter(cottage -> cottage.getId() == id)
                                 .findAny()
-                                .orElseThrow());
+                                .orElseThrow(() -> new NotFoundException("No cottage has the given id!")));
     }
 
 }

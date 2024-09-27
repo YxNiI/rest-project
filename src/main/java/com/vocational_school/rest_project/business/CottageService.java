@@ -26,4 +26,12 @@ public class CottageService
         cottages.add(cottage);
     }
 
+    public void deleteV1Cottage(int id)
+    {
+        cottages.remove(cottages.stream()
+                                .filter(cottage -> cottage.getId() == id)
+                                .findAny()
+                                .orElseThrow());
+    }
+
 }

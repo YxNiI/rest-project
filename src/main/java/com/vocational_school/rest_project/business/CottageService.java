@@ -32,7 +32,7 @@ public class CottageService
         cottages.remove(cottages.stream()
                                 .filter(cottage -> cottage.getId() == id)
                                 .findAny()
-                                .orElseThrow(() -> new NotFoundException("No cottage has the given id!")));
+                                .orElseThrow(() -> new NotFoundException("No cottage has the given id: %d!".formatted(id))));
     }
 
 }

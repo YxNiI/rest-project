@@ -14,7 +14,7 @@ import com.vocational_school.rest_project.domain.ErrorMessage;
 @ControllerAdvice(basePackageClasses = CottageController.class)
 public class RestExceptionHaendler
 {
-    @ExceptionHandler(NumberFormatException.class)
+    @ExceptionHandler(NotFoundException.class)
     public ResponseEntity<ErrorMessage> handleNotFoundException(NotFoundException e)
     {
         ErrorMessage errorMessage = new ErrorMessage();
